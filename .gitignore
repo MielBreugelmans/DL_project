@@ -150,3 +150,6 @@ uv.lock
 
 # Temporary files used for testing
 tmp/
+
+.npy
+.npz
