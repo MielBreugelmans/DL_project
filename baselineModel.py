@@ -9,7 +9,7 @@ class BaselineModel(nn.Module):
             nn.Conv3d(1, 64, (3, 5, 5)), # input channels = 1 (grayscale), output channels = 64, kernel size = (3, 5, 5) (depth, height, width)
             nn.ReLU(), 
             nn.MaxPool3d(3), # pooling size = 3 (depth, height, width) -> applies to each dimension of the input tensor
-            nn.Dropout(0.4),
+            nn.Dropout(0.2),
             nn.Conv3d(64, 64, (3, 5, 5)), ## Output shape: (N, 64, 4, 5, 5) where N is the batch size. 
             #The output shape can be calculated as follows:
             ## General: (D_out = (D_in - kernel_size + 2 * padding) / stride + 1)
@@ -18,7 +18,7 @@ class BaselineModel(nn.Module):
             ## Width: (48 - 5) / 1 + 1 = 44
             nn.ReLU(),
             nn.MaxPool3d(2), 
-            nn.Dropout(0.4),
+            nn.Dropout(0.2),
         )
         self.classifier = nn.Sequential(
             nn.Flatten(),
