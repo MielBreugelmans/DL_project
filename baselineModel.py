@@ -24,7 +24,7 @@ class BaselineModel(nn.Module):
             nn.Flatten(),
             nn.Linear(64 * 4 * 5 * 5, 600), # Fully connected layer: input features = 64 * 4 * 5 * 5 because the output of the last Conv3D layer has shape (N, 64, 4, 5, 5), output features = 600
             nn.ReLU(),
-            nn.Linear(600, 2),
+            nn.Linear(600, 1),
         )
 
     def forward(self, x):               # x: (N, 1, 36, 48, 48)
