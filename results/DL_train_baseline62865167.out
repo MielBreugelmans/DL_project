@@ -1,0 +1,155 @@
+Python:
+Python 3.14.2
+Torch:
+2.14.1+cu126
+CUDA:
+True
+TorchCodec:
+0.17.0+cu126
+cuda
+BaselineModel(
+  (features): Sequential(
+    (0): Conv3d(1, 64, kernel_size=(3, 5, 5), stride=(1, 1, 1))
+    (1): ReLU()
+    (2): MaxPool3d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+    (3): Dropout(p=0.2, inplace=False)
+    (4): Conv3d(64, 64, kernel_size=(3, 5, 5), stride=(1, 1, 1))
+    (5): ReLU()
+    (6): MaxPool3d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Dropout(p=0.2, inplace=False)
+  )
+  (classifier): Sequential(
+    (0): Flatten(start_dim=1, end_dim=-1)
+    (1): Linear(in_features=6400, out_features=600, bias=True)
+    (2): ReLU()
+    (3): Linear(in_features=600, out_features=1, bias=True)
+  )
+)
+1281 nodules left, share 'bad': 0.3013270882123341
+Patiënts: 462 82 97
+Samples: 918 166 197
+Amount positief: 0.28322440087145967 0.3313253012048193 0.3604060913705584
+Train mean/std used: 0.3119 / 0.2964
+Train after: 6.48454445695279e-08 0.9999966025352478
+Val after:   0.02319648303091526 0.9927977919578552
+Epoch 0 | train loss 0.4811 | val loss 0.4230 | val AUPRC 0.8626 | lr 0.000100
+Epoch 1 | train loss 0.4021 | val loss 0.3806 | val AUPRC 0.8766 | lr 0.000100
+Epoch 2 | train loss 0.3885 | val loss 0.3417 | val AUPRC 0.8901 | lr 0.000100
+Epoch 3 | train loss 0.3568 | val loss 0.4120 | val AUPRC 0.8401 | lr 0.000100
+Epoch 4 | train loss 0.3426 | val loss 0.3117 | val AUPRC 0.9009 | lr 0.000100
+Epoch 5 | train loss 0.3333 | val loss 0.3247 | val AUPRC 0.9151 | lr 0.000100
+Epoch 6 | train loss 0.3087 | val loss 0.2967 | val AUPRC 0.9161 | lr 0.000100
+Epoch 7 | train loss 0.3210 | val loss 0.3113 | val AUPRC 0.9091 | lr 0.000100
+Epoch 8 | train loss 0.3261 | val loss 0.2859 | val AUPRC 0.9070 | lr 0.000100
+Epoch 9 | train loss 0.3017 | val loss 0.2908 | val AUPRC 0.9183 | lr 0.000100
+Epoch 10 | train loss 0.3209 | val loss 0.3253 | val AUPRC 0.9150 | lr 0.000100
+Epoch 11 | train loss 0.3076 | val loss 0.2943 | val AUPRC 0.9249 | lr 0.000100
+Epoch 12 | train loss 0.3121 | val loss 0.4938 | val AUPRC 0.9032 | lr 0.000100
+Epoch 13 | train loss 0.2948 | val loss 0.2626 | val AUPRC 0.9267 | lr 0.000100
+Epoch 14 | train loss 0.2881 | val loss 0.2478 | val AUPRC 0.9328 | lr 0.000100
+Epoch 15 | train loss 0.2778 | val loss 0.2461 | val AUPRC 0.9282 | lr 0.000100
+Epoch 16 | train loss 0.3073 | val loss 0.2513 | val AUPRC 0.9328 | lr 0.000100
+Epoch 17 | train loss 0.2785 | val loss 0.2430 | val AUPRC 0.9300 | lr 0.000100
+Epoch 18 | train loss 0.2945 | val loss 0.2542 | val AUPRC 0.9280 | lr 0.000050
+Epoch 19 | train loss 0.2709 | val loss 0.2566 | val AUPRC 0.9286 | lr 0.000050
+Epoch 20 | train loss 0.2579 | val loss 0.2395 | val AUPRC 0.9300 | lr 0.000050
+Epoch 21 | train loss 0.2522 | val loss 0.2807 | val AUPRC 0.9276 | lr 0.000050
+Epoch 22 | train loss 0.2585 | val loss 0.2549 | val AUPRC 0.9342 | lr 0.000050
+Epoch 23 | train loss 0.2503 | val loss 0.2690 | val AUPRC 0.9308 | lr 0.000050
+Epoch 24 | train loss 0.2577 | val loss 0.2504 | val AUPRC 0.9281 | lr 0.000050
+Epoch 25 | train loss 0.2501 | val loss 0.3015 | val AUPRC 0.9242 | lr 0.000050
+Epoch 26 | train loss 0.2562 | val loss 0.2586 | val AUPRC 0.9345 | lr 0.000050
+Epoch 27 | train loss 0.2353 | val loss 0.2759 | val AUPRC 0.9239 | lr 0.000050
+Epoch 28 | train loss 0.2414 | val loss 0.2980 | val AUPRC 0.9233 | lr 0.000050
+Epoch 29 | train loss 0.2494 | val loss 0.2356 | val AUPRC 0.9370 | lr 0.000050
+Epoch 30 | train loss 0.2361 | val loss 0.2400 | val AUPRC 0.9363 | lr 0.000050
+Epoch 31 | train loss 0.2313 | val loss 0.2668 | val AUPRC 0.9316 | lr 0.000050
+Epoch 32 | train loss 0.2503 | val loss 0.2243 | val AUPRC 0.9387 | lr 0.000050
+Epoch 33 | train loss 0.2356 | val loss 0.2312 | val AUPRC 0.9394 | lr 0.000050
+Epoch 34 | train loss 0.2323 | val loss 0.2422 | val AUPRC 0.9381 | lr 0.000050
+Epoch 35 | train loss 0.2324 | val loss 0.2318 | val AUPRC 0.9375 | lr 0.000050
+Epoch 36 | train loss 0.2235 | val loss 0.2383 | val AUPRC 0.9349 | lr 0.000050
+Epoch 37 | train loss 0.2412 | val loss 0.2407 | val AUPRC 0.9355 | lr 0.000025
+Epoch 38 | train loss 0.2084 | val loss 0.2399 | val AUPRC 0.9373 | lr 0.000025
+Epoch 39 | train loss 0.2137 | val loss 0.2874 | val AUPRC 0.9334 | lr 0.000025
+Epoch 40 | train loss 0.2188 | val loss 0.2294 | val AUPRC 0.9380 | lr 0.000025
+Epoch 41 | train loss 0.2215 | val loss 0.2290 | val AUPRC 0.9402 | lr 0.000025
+Epoch 42 | train loss 0.2034 | val loss 0.2314 | val AUPRC 0.9376 | lr 0.000025
+Epoch 43 | train loss 0.2181 | val loss 0.2325 | val AUPRC 0.9391 | lr 0.000025
+Epoch 44 | train loss 0.2154 | val loss 0.2486 | val AUPRC 0.9349 | lr 0.000025
+Epoch 45 | train loss 0.2140 | val loss 0.2449 | val AUPRC 0.9392 | lr 0.000013
+Epoch 46 | train loss 0.2006 | val loss 0.2289 | val AUPRC 0.9408 | lr 0.000013
+Epoch 47 | train loss 0.2082 | val loss 0.2317 | val AUPRC 0.9402 | lr 0.000013
+Epoch 48 | train loss 0.2205 | val loss 0.2340 | val AUPRC 0.9403 | lr 0.000013
+Epoch 49 | train loss 0.2124 | val loss 0.2578 | val AUPRC 0.9392 | lr 0.000013
+Epoch 50 | train loss 0.2097 | val loss 0.2287 | val AUPRC 0.9416 | lr 0.000013
+Epoch 51 | train loss 0.1925 | val loss 0.2439 | val AUPRC 0.9401 | lr 0.000013
+Epoch 52 | train loss 0.1991 | val loss 0.2326 | val AUPRC 0.9412 | lr 0.000013
+Epoch 53 | train loss 0.2108 | val loss 0.2330 | val AUPRC 0.9437 | lr 0.000013
+Epoch 54 | train loss 0.1993 | val loss 0.2339 | val AUPRC 0.9423 | lr 0.000013
+Epoch 55 | train loss 0.2038 | val loss 0.2302 | val AUPRC 0.9409 | lr 0.000013
+Epoch 56 | train loss 0.2049 | val loss 0.2315 | val AUPRC 0.9410 | lr 0.000013
+Epoch 57 | train loss 0.2091 | val loss 0.2319 | val AUPRC 0.9385 | lr 0.000006
+Epoch 58 | train loss 0.1969 | val loss 0.2294 | val AUPRC 0.9394 | lr 0.000006
+Epoch 59 | train loss 0.1874 | val loss 0.2322 | val AUPRC 0.9387 | lr 0.000006
+Epoch 60 | train loss 0.1908 | val loss 0.2378 | val AUPRC 0.9403 | lr 0.000006
+Epoch 61 | train loss 0.1935 | val loss 0.2308 | val AUPRC 0.9417 | lr 0.000003
+Epoch 62 | train loss 0.1983 | val loss 0.2331 | val AUPRC 0.9407 | lr 0.000003
+Epoch 63 | train loss 0.1932 | val loss 0.2349 | val AUPRC 0.9406 | lr 0.000003
+Epoch 64 | train loss 0.1889 | val loss 0.2367 | val AUPRC 0.9399 | lr 0.000003
+Epoch 65 | train loss 0.1970 | val loss 0.2397 | val AUPRC 0.9398 | lr 0.000002
+Epoch 66 | train loss 0.1887 | val loss 0.2371 | val AUPRC 0.9400 | lr 0.000002
+Epoch 67 | train loss 0.1956 | val loss 0.2343 | val AUPRC 0.9390 | lr 0.000002
+Epoch 68 | train loss 0.1997 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000002
+Epoch 69 | train loss 0.2014 | val loss 0.2337 | val AUPRC 0.9393 | lr 0.000001
+Epoch 70 | train loss 0.1955 | val loss 0.2328 | val AUPRC 0.9393 | lr 0.000001
+Epoch 71 | train loss 0.1882 | val loss 0.2338 | val AUPRC 0.9393 | lr 0.000001
+Epoch 72 | train loss 0.1815 | val loss 0.2337 | val AUPRC 0.9394 | lr 0.000001
+Epoch 73 | train loss 0.1859 | val loss 0.2342 | val AUPRC 0.9393 | lr 0.000000
+Epoch 74 | train loss 0.1913 | val loss 0.2344 | val AUPRC 0.9395 | lr 0.000000
+Epoch 75 | train loss 0.1936 | val loss 0.2352 | val AUPRC 0.9389 | lr 0.000000
+Epoch 76 | train loss 0.1839 | val loss 0.2350 | val AUPRC 0.9388 | lr 0.000000
+Epoch 77 | train loss 0.1858 | val loss 0.2347 | val AUPRC 0.9389 | lr 0.000000
+Epoch 78 | train loss 0.1867 | val loss 0.2348 | val AUPRC 0.9388 | lr 0.000000
+Epoch 79 | train loss 0.1905 | val loss 0.2350 | val AUPRC 0.9391 | lr 0.000000
+Epoch 80 | train loss 0.1901 | val loss 0.2350 | val AUPRC 0.9392 | lr 0.000000
+Epoch 81 | train loss 0.1986 | val loss 0.2351 | val AUPRC 0.9391 | lr 0.000000
+Epoch 82 | train loss 0.1803 | val loss 0.2350 | val AUPRC 0.9391 | lr 0.000000
+Epoch 83 | train loss 0.2028 | val loss 0.2351 | val AUPRC 0.9391 | lr 0.000000
+Epoch 84 | train loss 0.1943 | val loss 0.2351 | val AUPRC 0.9391 | lr 0.000000
+Epoch 85 | train loss 0.1902 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 86 | train loss 0.1938 | val loss 0.2352 | val AUPRC 0.9392 | lr 0.000000
+Epoch 87 | train loss 0.1918 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 88 | train loss 0.1855 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 89 | train loss 0.1990 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 90 | train loss 0.1900 | val loss 0.2352 | val AUPRC 0.9392 | lr 0.000000
+Epoch 91 | train loss 0.1909 | val loss 0.2352 | val AUPRC 0.9392 | lr 0.000000
+Epoch 92 | train loss 0.1901 | val loss 0.2352 | val AUPRC 0.9392 | lr 0.000000
+Epoch 93 | train loss 0.1951 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 94 | train loss 0.1805 | val loss 0.2352 | val AUPRC 0.9392 | lr 0.000000
+Epoch 95 | train loss 0.1776 | val loss 0.2352 | val AUPRC 0.9392 | lr 0.000000
+Epoch 96 | train loss 0.1979 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 97 | train loss 0.1773 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 98 | train loss 0.1848 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Epoch 99 | train loss 0.1986 | val loss 0.2351 | val AUPRC 0.9392 | lr 0.000000
+Train time on cuda: 95.705 seconds
+Best epoch 53, val AUPRC 0.9437
+Threshold chosen on val: 0.6177916
+Predicted 'Bad': 57
+Real 'Bad': 71
+Shape: (197,) (197,)
+AUPRC:  0.9061513943417121
+Random Baseline ('Bad' %): 0.3604
+Accuracy: 0.8883248730964467
+[[122   4]
+ [ 18  53]]
+              precision    recall  f1-score   support
+
+        good       0.87      0.97      0.92       126
+         bad       0.93      0.75      0.83        71
+
+    accuracy                           0.89       197
+   macro avg       0.90      0.86      0.87       197
+weighted avg       0.89      0.89      0.89       197
+
+Test AUPRC: 0.9062 ± 0.0307  95% CI [0.8421 - 0.9633]

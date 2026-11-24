@@ -33,7 +33,7 @@ print(model)
 
 # Pretrained weights from MedicalNet (Google Drive: MedicalNet_pytorch_files2/pretrain/)
 # resnet_10_23dataset.pth = ResNet-10 pretrained on 23 medical datasets
-PRETRAINED_PATH = "/pretrain_mednet/resnet_10_23dataset.pth"
+PRETRAINED_PATH = ROOT_PATH / "pretrain_mednet" / "resnet_10_23dataset.pth"
 
 # weights_only=True: only tensors are loaded, no code from the pickle file is executed
 checkpoint = torch.load(PRETRAINED_PATH, map_location="cpu", weights_only=True)

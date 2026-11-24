@@ -9,7 +9,7 @@ import os
 from torch.utils.data import TensorDataset, DataLoader
 import torch.optim as optim
 from timeit import default_timer as timer
-from mednet import ResNet10
+from unetModel import UNet
 from pathlib import Path
 import matplotlib.pyplot as plt
 import copy
@@ -127,12 +127,11 @@ loss_fn = nn.BCEWithLogitsLoss()
 # pos_weight = torch.tensor([(1 - y_train.mean()) / y_train.mean()], device=device)
 # loss_fn = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
 
-# Pretrained backbone gets a 10x lower learning rate than the new classification head (fc),
-# so the pretrained features are fine-tuned instead of overwritten
+# Backbone gets a 10x lower learning rate than the classification head (outconv)
 LR_BACKBONE = 1e-4
 LR_HEAD = 1e-3
-head_params = list(model.fc.parameters())
-backbone_params = [p for name, p in model.named_parameters() if not name.startswith("fc.")]
+head_params = list(model.outconv.parameters())
+backbone_params = [p for name, p in model.named_parameters() if not name.startswith("outconv.")]
 
 optimizer = optim.AdamW([
     {"params": backbone_params, "lr": LR_BACKBONE},
